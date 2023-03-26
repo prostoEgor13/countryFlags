@@ -1,0 +1,12 @@
+
+[data-theme="darkMain"] {
+  background-color: #27272e;
+    transition: 0.5s;
+    color: #ffffff;
+    /* border:1px solid #27272e; */
+  }
+  [data-theme="lightMain"] {
+    background-color: #ffffff;
+    color: black;
+    transition: 0.5s; 
+  }
