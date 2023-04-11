@@ -1,22 +1,20 @@
 import css from "./Header.module.scss";
 import cn from "classnames";
 import PropTypes from "prop-types";
-import moon from "./img/moon.png";
+// import moon from "./img/moon.png";
 import useLocalStorageState from "use-local-storage-state";
+import { ReactComponent as Moon } from "./img/moon-icon.svg";
+import { useTheme } from "../../useTheme";
 
 const lightTheme = "light";
 const darkTheme = "dark";
-
-const lightThemeMain = "lightMain";
-const darkThemeMain = "darkMain";
 
 const Header = ({ logo = "Where in the world" }) => {
   const [theme, setTheme] = useLocalStorageState("theme", {
     defaultValue: "light",
   });
-  const [themeMain, setThemeMain] = useLocalStorageState("themeMain", {
-    defaultValue: "lightMain",
-  });
+  const [, isDarkHeader] = useTheme();
+
   const changeMode = () => {
     // const newTheme = theme === "light" ? "dark" : "light";
     // setTheme(newTheme);
@@ -28,18 +26,17 @@ const Header = ({ logo = "Where in the world" }) => {
     // }
 
     setTheme(theme === lightTheme ? darkTheme : lightTheme);
-    setThemeMain(themeMain === lightThemeMain ? darkThemeMain : lightThemeMain);
-    console.log("a");
   };
-
+  console.log(isDarkHeader);
   return (
-    <header className={cn(css.Header__header)}>
-      <div className={cn(css.Header__main)}data-theme={theme}>
+    <header className={cn(css.Header__header, { darkHeader: isDarkHeader })}>
+      <div className={cn(css.Header__main, { darkHeader: isDarkHeader })} data-theme={theme}>
         <div className={cn(css.Header__logo)}>
           <h1>{logo}</h1>
         </div>
         <div className={cn(css.Header__theme)}>
-          <img src={moon} alt="" className={cn(css.Header__moon)} />
+          {/* <img src={moon} alt="" className={cn(css.Header__moon)} /> */}
+          <Moon className={cn(css.Header__moon)} />
           <p onClick={changeMode}> Dark Mode</p>
         </div>
       </div>

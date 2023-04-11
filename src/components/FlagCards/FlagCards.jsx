@@ -1,23 +1,10 @@
 import css from "./FlagCards.module.scss";
 import cn from "classnames";
-import axios from "axios";
-import { useEffect, useState } from "react";
-import { useThemeMain } from "../../useThemeMain";
+
 import { useTheme } from "../../useTheme";
 
-const FlagCards = () => {
-  const [flags, setFlags] = useState([]);
-  const theme = useTheme();
-  const themeMain = useThemeMain();
-
-  const getCountry = async () => {
-    const response = await axios.get("https://restcountries.com/v3/all");
-    setFlags(response.data);
-  };
-
-  useEffect(() => {
-    getCountry();
-  }, []);
+const FlagCards = ({ flags }) => {
+  const [theme, isDark] = useTheme();
 
   const flagcards = flags.map((e, index) => {
     return (
@@ -28,7 +15,7 @@ const FlagCards = () => {
       >
         <div className={cn(css.FlagCards__cardFlags)}>
           <img
-            src={e.flags[0]}
+            src={e.flags[0]??e.flags.png}
             alt=""
             className={cn(css.FlagCards__flagsImg)}
           />
@@ -61,10 +48,14 @@ const FlagCards = () => {
       </div>
     );
   });
+
   return (
-    <div className={cn(css.FlagCards__wrapper)} data-theme={themeMain}>
+    <div className={cn(css.FlagCards__wrapper)} data-theme={theme}>
       <div className={cn(css.FlagCards__main)} data-theme={theme}>
-        <div className={cn(css.FlagCards__card)} data-theme={themeMain}>
+        <div
+          className={cn(css.FlagCards__card, { dark: isDark })}
+          data-theme={theme}
+        >
           {flagcards}
         </div>
       </div>

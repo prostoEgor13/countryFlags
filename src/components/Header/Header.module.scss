@@ -7,6 +7,8 @@ $colorblack: black;
 
 .Header {
   &__main {
+    position: relative;
+    bottom: 1vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,7 +17,6 @@ $colorblack: black;
     width: 100vw;
     box-shadow: 3px 2px 4px #e4e4e4;
   }
-
   &__logo {
     position: relative;
     left: 5vw;
@@ -26,16 +27,10 @@ $colorblack: black;
     right: 5vw;
   }
   &__moon {
-    height: 48px;
-    width: 48px;
-  }
-  [data-theme=dark] {
-    background-color: #252323;
-    transition: 1s;
-    color: #ffffff;
-  }
-  [data-theme=light] {
-    background-color: #ffffff;
-    transition: 1s;
+    position: relative;
+    top: 1vh;
+    right: 1vw;
+    height: 30px;
+    width: 30px;
   }
 }

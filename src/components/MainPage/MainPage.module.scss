@@ -10,6 +10,7 @@ $colorblack: black;
     display: flex;
     justify-content: center;
     align-items: center;
+    // margin-top: 1vh;
   }
   &__Main {
     display: flex;
@@ -22,10 +23,11 @@ $colorblack: black;
     position: relative;
     top: 5vh;
     // height: 90vh;
-    width: 90vw;
+    width: 100vw;
     display: flex;
     justify-content: center;
     justify-content: space-between;
+    width: 100vw;
   }
   &__MainSearchInput {
     height: 5vh;
@@ -47,5 +49,4 @@ $colorblack: black;
       0px 2px 15px rgba(0, 0, 0, 0.1);
     outline: none;
   }
-
 }

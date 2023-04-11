@@ -10,6 +10,7 @@ $openSans: "Open Sans", sans-serif;
     align-items: center;
     justify-content: center;
     margin-top: 5vh;
+    width: 100vw;
   }
   &__main {
     display: flex;
@@ -22,8 +23,9 @@ $openSans: "Open Sans", sans-serif;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-    justify-content: space-between;
+    // justify-content: center;
+    // justify-content: space-between;
+    gap: 48px;
   }
   &__flagsImg {
     height: 16vh;
@@ -55,6 +57,7 @@ $openSans: "Open Sans", sans-serif;
     display: flex;
     font-family: $openSans;
     font-weight: 500;
+    line-height: 0.3vh;
   }
 
   &__InfoCardName {
@@ -69,5 +72,9 @@ $openSans: "Open Sans", sans-serif;
     font-family: $Montserrat;
     position: relative;
     left: 0.5vw;
+  }
+  &__InfoCardName{
+    margin-top: -1vh;
+   line-height: 2vh;
   }
 }
