@@ -1,0 +1,52 @@
+$colorblack: black;
+@mixin styletext($fonts, $fontfam) {
+  font-family: $fontfam;
+  font-size: $fonts;
+  color: $colorblack;
+}
+
+.MainPage {
+  &__Body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // margin-top: 1vh;
+  }
+  &__Main {
+    display: flex;
+    justify-content: center;
+    // height: 90vh;
+    width: 90vw;
+    // background-color: aqua;
+  }
+  &__MainSearch {
+    position: relative;
+    top: 5vh;
+    // height: 90vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    width: 100vw;
+  }
+  &__MainSearchInput {
+    height: 5vh;
+    width: 25vw;
+    border: 1px solid white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5),
+      0px 1px 2px rgba(0, 0, 0, 0.1), 0px 2px 2px rgba(0, 0, 0, 0.1),
+      0px 2px 15px rgba(0, 0, 0, 0.1);
+    outline: none;
+  }
+  &__MainSearchSelect {
+    height: 5vh;
+    width: 15vw;
+    border: 1px solid white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5),
+      0px 1px 2px rgba(0, 0, 0, 0.1), 0px 2px 2px rgba(0, 0, 0, 0.1),
+      0px 2px 15px rgba(0, 0, 0, 0.1);
+    outline: none;
+  }
+}

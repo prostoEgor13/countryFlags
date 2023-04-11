@@ -27,6 +27,7 @@ module.exports = {
         'arrow-body-style': 'off',
         'react/function-component-definition': 'off',
         'jsx-a11y/anchor-is-valid': 'off',
+        'react/prop-types': 'off',
         'jsx-a11y/no-noninteractive-element-interactions': 'off',
         'jsx-a11y/mouse-events-have-key-events': 'off',
         'jsx-a11y/no-static-element-interactions': 'off',

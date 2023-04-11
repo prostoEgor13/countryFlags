@@ -1,0 +1,27 @@
+.Header__main {
+  position: relative;
+  bottom: 1vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  height: 10vh;
+  width: 100vw;
+  box-shadow: 3px 2px 4px #e4e4e4;
+}
+.Header__logo {
+  position: relative;
+  left: 5vw;
+}
+.Header__theme {
+  display: flex;
+  position: relative;
+  right: 5vw;
+}
+.Header__moon {
+  position: relative;
+  top: 1vh;
+  right: 1vw;
+  height: 30px;
+  width: 30px;
+}/*# sourceMappingURL=Header.module.css.map */
