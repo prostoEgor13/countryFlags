@@ -6,12 +6,13 @@ import { useTheme } from './useTheme';
 
 
 
+
 function App() {
   const [theme] = useTheme()
 
   return (
     <div className="App">
-      <div  data-theme={theme}>
+      <div className="appContainer" data-theme={theme}>
         <Header />
         <MainPage />
       </div>

@@ -32,7 +32,6 @@ const MainPage = () => {
   const getAllFlags = async () => {
     const response = await axios.get("https://restcountries.com/v3/all");
     setFlagsRegion(response.data);
-    console.log(response.data);
   };
 
   useEffect(() => {
@@ -56,7 +55,7 @@ const MainPage = () => {
       `https://restcountries.com/v3.1/name/${countryName}`
     );
     setFlagsRegion(response.data);
-    console.log(response.data);
+    console.log(countryName);
   };
 
   useEffect(() => {

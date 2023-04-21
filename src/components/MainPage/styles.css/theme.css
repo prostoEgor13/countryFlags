@@ -7,6 +7,7 @@
   background-color: var(--dark);
   transition: 0.5s;
   color: #ffffff;
+  
 }
 
 .dark [data-theme="dark"] {

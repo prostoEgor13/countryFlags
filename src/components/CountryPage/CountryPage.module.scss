@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap");
+$Montserrat: "Montserrat", sans-serif;
+$Roboto: "Roboto", sans-serif;
+$openSans: "Open Sans", sans-serif;
+
+.CountryPage {
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+  }
+  &__wrapperMain {
+    position: relative;
+    top: 5vh;
+    width: 90vw;
+    height: 70vh;
+    // background-color: antiquewhite;
+  }
+  &__mainButton {
+    position: relative;
+    width: 95px;
+    height: 25px;
+    text-align: center;
+    background-color: #fafafa;
+    color: #111517;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
+  }
+  &__mainSection {
+    position: relative;
+    top: 5vh;
+  }
+  &__Flag {
+    height: 400px;
+    width: 550px;
+    // box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
+  }
+  &__mainSection {
+    display: flex;
+  }
+  &__sectionInfo {
+    position: relative;
+    left: 5vw;
+  }
+  &__infoDetails {
+    position: relative;
+    // left: 5vw;
+    display: flex;
+    justify-content: space-between;
+    // align-items: center;
+    width: 40vw;
+    height: 30vh;
+    // background-color: aqua;
+  }
+  &__linkBorder {
+    color: #111517;
+    text-decoration: none;
+    font-family: $openSans;
+  }
+}
